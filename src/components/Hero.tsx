@@ -24,14 +24,14 @@ const Hero: React.FC = () => {
           >
             <div className="absolute inset-0 rounded-full blur-xl bg-gradient-to-tr from-blue-400 via-purple-500 to-cyan-400 opacity-40" />
             <img
-              src="vision.jpg"
+              src="md-toushif.jpg"
               alt="Md Toushif"
               className="w-full h-full rounded-full object-cover border-4 border-white shadow-2xl relative"
               loading="lazy"
               draggable={false}
             />
             <motion.div
-              className="absolute -bottom-2 -right-2 w-12 h-12 bg-green-500 rounded-full border-4 border-white flex items-center justify-center"
+              className="absolute -bottom-2 -right-2 w-12 h-12 bg-blue-400 rounded-full border-4 border-white flex items-center justify-center"
               animate={{ y: [0, -6, 0] }}
               transition={{ repeat: Infinity, duration: 2 }}
             >

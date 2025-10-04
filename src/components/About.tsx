@@ -1,36 +1,44 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Database, Globe, Server, Palette } from "lucide-react";
+import { Database, Globe, Server, Wrench, Link } from "lucide-react";
 
 const About: React.FC = () => {
   const skills = [
     {
       name: "Frontend Development",
       icon: Globe,
-      level: 95,
+      level: 92,
       color: "from-blue-500 to-cyan-500",
-      description: "React, Vue, Angular",
+      description:
+        "React.js, Next.js, JavaScript, Bootstrap, Tailwind, HTML, CSS, Alpine.js",
     },
     {
       name: "Backend Development",
       icon: Server,
-      level: 88,
+      level: 85,
       color: "from-green-500 to-emerald-500",
-      description: "Node.js, Python, Java",
+      description: "Laravel (PHP), Node.js, Express.js, .NET Core MVC, C#",
     },
     {
       name: "Database Design",
       icon: Database,
-      level: 85,
+      level: 83,
       color: "from-purple-500 to-violet-500",
-      description: "PostgreSQL, MongoDB",
+      description: "MySQL, PostgreSQL, MongoDB",
     },
     {
-      name: "UI/UX Design",
-      icon: Palette,
-      level: 82,
-      color: "from-orange-500 to-amber-500",
-      description: "Figma, Adobe XD",
+      name: "API Development",
+      icon: Link,
+      level: 80,
+      color: "from-pink-500 to-rose-500",
+      description: "RESTful APIs, Authentication, Integrations",
+    },
+    {
+      name: "DevOps & Tools",
+      icon: Wrench,
+      level: 70,
+      color: "from-gray-500 to-gray-700",
+      description: "Git/GitHub, Docker, AWS basics, Vercel, Netlify, Appwrite",
     },
   ];
 
@@ -41,7 +49,7 @@ const About: React.FC = () => {
       textColor: "text-white",
       icon: "📜",
     },
-        {
+    {
       name: "TypeScript",
       color: "bg-gradient-to-r from-blue-500 to-blue-700",
       textColor: "text-white",
@@ -54,11 +62,43 @@ const About: React.FC = () => {
       icon: "⚛️",
     },
     {
+      name: "Next.js",
+      color: "bg-gradient-to-r from-gray-800 to-gray-600",
+      textColor: "text-white",
+      icon: "▲",
+    },
+    {
       name: "Node.js",
       color: "bg-gradient-to-r from-green-500 to-green-700",
       textColor: "text-white",
       icon: "🟢",
     },
+    {
+      name: "Express.js",
+      color: "bg-gradient-to-r from-gray-700 to-gray-900",
+      textColor: "text-white",
+      icon: "🚂",
+    },
+    {
+      name: "Laravel (PHP)",
+      color: "bg-gradient-to-r from-red-500 to-red-700",
+      textColor: "text-white",
+      icon: "🐘",
+    },
+    {
+      name: ".NET Core MVC",
+      color: "bg-gradient-to-r from-purple-600 to-purple-800",
+      textColor: "text-white",
+      icon: "🟪",
+    },
+    {
+      name: "REST APIs",
+      color: "bg-gradient-to-r from-pink-400 to-pink-600",
+      textColor: "text-white",
+      icon: "🔗",
+    },
+
+    // Databases
     {
       name: "PostgreSQL",
       color: "bg-gradient-to-r from-indigo-500 to-indigo-700",
@@ -66,28 +106,70 @@ const About: React.FC = () => {
       icon: "🐘",
     },
     {
+      name: "MySQL",
+      color: "bg-gradient-to-r from-blue-500 to-blue-700",
+      textColor: "text-white",
+      icon: "🗄️",
+    },
+    {
       name: "MongoDB",
       color: "bg-gradient-to-r from-green-600 to-green-800",
       textColor: "text-white",
       icon: "🍃",
     },
+
+    // Styling & UI
     {
-      name: "Next.js",
-      color: "bg-gradient-to-r from-gray-800 to-gray-700",
-      textColor: "text-white",
-      icon: "▲",
-    },
-    {
-      name: "Tailwind",
+      name: "Tailwind CSS",
       color: "bg-gradient-to-r from-cyan-400 to-cyan-600",
       textColor: "text-white",
       icon: "🎨",
     },
     {
-      name: "Three.js",
-      color: "bg-gradient-to-r from-purple-500 to-purple-700",
+      name: "Bootstrap",
+      color: "bg-gradient-to-r from-violet-500 to-violet-700",
       textColor: "text-white",
-      icon: "🎭",
+      icon: "📐",
+    },
+
+    // DevOps & Cloud
+    {
+      name: "Docker",
+      color: "bg-gradient-to-r from-blue-600 to-blue-800",
+      textColor: "text-white",
+      icon: "🐳",
+    },
+    {
+      name: "AWS",
+      color: "bg-gradient-to-r from-orange-400 to-orange-600",
+      textColor: "text-white",
+      icon: "☁️",
+    },
+    {
+      name: "Appwrite",
+      color: "bg-gradient-to-r from-pink-500 to-red-600",
+      textColor: "text-white",
+      icon: "🛠️",
+    },
+    {
+      name: "Vercel",
+      color: "bg-gradient-to-r from-black to-gray-700",
+      textColor: "text-white",
+      icon: "▲",
+    },
+    {
+      name: "Netlify",
+      color: "bg-gradient-to-r from-green-500 to-teal-600",
+      textColor: "text-white",
+      icon: "🌐",
+    },
+
+    // Tools
+    {
+      name: "Git & GitHub",
+      color: "bg-gradient-to-r from-gray-600 to-gray-800",
+      textColor: "text-white",
+      icon: "🐙",
     },
   ];
 

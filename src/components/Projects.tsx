@@ -14,139 +14,92 @@ const Projects: React.FC = () => {
   const [filter, setFilter] = useState("all");
 
   const projects = [
-    {
-      id: 1,
-      title: "E-Commerce Platform",
-      description:
-        "A comprehensive e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, real-time inventory, and advanced analytics dashboard.",
-      image:
-        "https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=600",
-      technologies: [
-        "React",
-        "Node.js",
-        "PostgreSQL",
-        "Stripe",
-        "Tailwind CSS",
-        "Redis",
-      ],
-      github: "#",
-      demo: "#",
-      category: "fullstack",
-      featured: true,
-      stats: { stars: 124, users: "2.5k", date: "2024" },
-      gradient: "from-blue-500 to-purple-600",
-    },
-    {
-      id: 2,
-      title: "AI Task Management",
-      description:
-        "Intelligent task management application with AI-powered prioritization, real-time collaboration, drag-and-drop functionality, and smart scheduling algorithms.",
-      image:
-        "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
-      technologies: [
-        "React",
-        "TypeScript",
-        "Socket.io",
-        "MongoDB",
-        "OpenAI",
-        "Express",
-      ],
-      github: "#",
-      demo: "#",
-      category: "frontend",
-      featured: false,
-      stats: { stars: 89, users: "1.2k", date: "2024" },
-      gradient: "from-green-500 to-teal-600",
-    },
-    {
-      id: 3,
-      title: "Weather Analytics Dashboard",
-      description:
-        "Advanced weather dashboard with predictive analytics, interactive maps, climate data visualization, and personalized weather insights using machine learning.",
-      image:
-        "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600",
-      technologies: [
-        "Vue.js",
-        "D3.js",
-        "Python",
-        "FastAPI",
-        "Chart.js",
-        "OpenWeather API",
-      ],
-      github: "#",
-      demo: "#",
-      category: "frontend",
-      featured: false,
-      stats: { stars: 67, users: "800", date: "2023" },
-      gradient: "from-orange-500 to-red-600",
-    },
-    {
-      id: 4,
-      title: "Social Media Analytics",
-      description:
-        "Comprehensive analytics platform for social media management with sentiment analysis, engagement tracking, automated reporting, and competitor analysis.",
-      image:
-        "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600",
-      technologies: [
-        "Next.js",
-        "D3.js",
-        "Python",
-        "FastAPI",
-        "Redis",
-        "TensorFlow",
-      ],
-      github: "#",
-      demo: "#",
-      category: "fullstack",
-      featured: true,
-      stats: { stars: 156, users: "3.1k", date: "2024" },
-      gradient: "from-purple-500 to-pink-600",
-    },
-    {
-      id: 5,
-      title: "Fitness Tracking Mobile App",
-      description:
-        "Cross-platform fitness application with workout tracking, nutrition monitoring, progress visualization, social features, and personalized coaching.",
-      image:
-        "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600",
-      technologies: [
-        "React Native",
-        "Firebase",
-        "Redux",
-        "Chart.js",
-        "Expo",
-        "Stripe",
-      ],
-      github: "#",
-      demo: "#",
-      category: "mobile",
-      featured: false,
-      stats: { stars: 203, users: "5.2k", date: "2023" },
-      gradient: "from-cyan-500 to-blue-600",
-    },
-    {
-      id: 6,
-      title: "AI Content Generator",
-      description:
-        "Intelligent content generation platform with natural language processing, customizable templates, SEO optimization, and multi-language support.",
-      image:
-        "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600",
-      technologies: [
-        "Python",
-        "OpenAI API",
-        "Flask",
-        "React",
-        "TensorFlow",
-        "PostgreSQL",
-      ],
-      github: "#",
-      demo: "#",
-      category: "ai",
-      featured: true,
-      stats: { stars: 78, users: "1.8k", date: "2024" },
-      gradient: "from-indigo-500 to-purple-600",
-    },
-  ];
+  {
+    id: 1,
+    title: "Jharkhand Biodiversity Board Portal",
+    description:
+      "A government portal for managing biodiversity-related applications, approvals, and public services in Jharkhand. Built with WordPress, it streamlines information sharing, scheme updates, and citizen engagement.",
+    image: "jharkhand-biodiversity-board.png",
+    technologies: ["WordPress", "PHP", "MySQL"],
+    github: "#",
+    demo: "https://jbb.jharkhand.gov.in/",
+    category: "fullstack",
+    featured: false,
+    stats: { stars: 0, users: "10k+", date: "2024" },
+    gradient: "from-blue-500 to-purple-600",
+  },
+  {
+    id: 2,
+    title: "Jharkhand Gau Seva Ayog Portal",
+    description:
+      "A welfare portal for livestock and cow protection schemes in Jharkhand. Developed on WordPress to manage scheme content, announcements, and beneficiary information with a user-friendly CMS interface.",
+    image: "jharkhand-gauseva-aayog.png",
+    technologies: ["WordPress", "PHP", "MySQL"],
+    github: "#",
+    demo: "https://jhgausevaayog.org/hi/",
+    category: "fullstack",
+    featured: false,
+    stats: { stars: 0, users: "5k+", date: "2024" },
+    gradient: "from-green-500 to-emerald-600",
+  },
+  {
+    id: 3,
+    title: "Sure Education Consultancy Portal",
+    description:
+      "A consultancy platform providing education and career guidance services. Built with WordPress, it manages course information, student inquiries, and content updates seamlessly for better user experience.",
+    image: "sure-education.png",
+    technologies: ["WordPress", "PHP", "MySQL"],
+    github: "#",
+    demo: "https://sureeducation.in/",
+    category: "fullstack",
+    featured: false,
+    stats: { stars: 0, users: "2k+", date: "2024" },
+    gradient: "from-orange-500 to-red-600",
+  },
+  {
+    id: 4,
+    title: "Mukhymantri Abua Swasthya Suraksha Yojana",
+    description:
+      "A large-scale healthcare portal that manages beneficiary applications, KYC verification, and operator status. Built with React and Tailwind, it ensures smooth processing of health scheme benefits with transparency and speed.",
+    image: "mmassy.png",
+    technologies: ["React.js", "Tailwind CSS", "Material UI"],
+    github: "#",
+    demo: "https://bis.jharkhand.gov.in/",
+    category: "frontend",
+    featured: true,
+    stats: { stars: 0, users: "15k+", date: "2024" },
+    gradient: "from-purple-500 to-pink-600",
+  },
+  {
+    id: 5,
+    title: "Mukhya Mantri Maiya Samman Yojana",
+    description:
+      "A women-centric welfare application that manages scheme applications, KYC verification, and approval workflows. Built with .NET Core MVC and PostgreSQL, it simplifies benefit distribution and supports women empowerment initiatives.",
+    image: "mmmsy.png",
+    technologies: [".NET Core MVC", "C#", "Entity Framework", "PostgreSQL"],
+    github: "#",
+    demo: "https://mmmsy.jharkhand.gov.in/",
+    category: "frontend",
+    featured: false,
+    stats: { stars: 0, users: "8k+", date: "2024" },
+    gradient: "from-teal-500 to-green-600",
+  },
+  {
+    id: 6,
+    title: "State Employees Health Insurance Portal",
+    description:
+      "A health insurance management system for state employees to apply for coverage, track claims, and download policy documents. Built with .NET Core MVC and PostgreSQL, it enhances accessibility and digitizes the entire workflow.",
+    image: "sehis.png",
+    technologies: [".NET Core MVC", "C#", "Entity Framework", "PostgreSQL"],
+    github: "#",
+    demo: "https://sehis.jharkhand.gov.in/",
+    category: "frontend",
+    featured: true,
+    stats: { stars: 0, users: "12k+", date: "2024" },
+    gradient: "from-cyan-500 to-blue-600",
+  },
+];
+
 
   const categories = [
     { id: "all", name: "All Projects", count: projects.length },

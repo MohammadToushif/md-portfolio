@@ -3,84 +3,86 @@ import { motion } from "framer-motion";
 import { Briefcase, Rocket, Code2, Trophy } from "lucide-react";
 
 const Experience: React.FC = () => {
-  const experiences = [
-    {
-      id: 1,
-      title: "Full Stack Developer",
-      company: "TechCorp Solutions",
-      location: "Ranchi, Jharkhand",
-      period: "Sep 2025 - Present",
-      type: "Full-time",
-      description:
-        "Leading development of scalable web applications using React, Node.js, and cloud technologies. Managing a team of developers and implementing best practices.",
-      achievements: [
-        "Increased application performance by 40% through optimization",
-        "Led migration to microservices architecture",
-        "Mentored 3 junior developers",
-      ],
-      technologies: [
-        "React",
-        "Node.js",
-        "Next.js",
-        "AWS",
-        "PostgreSQL",
-        "Docker",
-      ],
-      icon: Briefcase,
-      color: "from-blue-500 to-cyan-500",
-    },
-    {
-      id: 2,
-      title: "Full Stack Developer",
-      company: "ePointer Consultancy Services Pvt. Ltd.",
-      location: "Remote",
-      period: "Feb 2025 - July 2025",
-      type: "Full-time",
-      description:
-        "Built MVP for fintech startup, handling both frontend and backend development. Integrated payment systems and implemented security protocols.",
-      achievements: [
-        "Delivered MVP ahead of schedule",
-        "Integrated Stripe payment processing",
-        "Implemented secure OAuth authentication",
-      ],
-      technologies: [
-        "HTML",
-        "CSS",
-        "Tailwind CSS",
-        "Javascript",
-        "PHP",
-        "Laravel",
-        "MySQL",
-      ],
-      icon: Rocket,
-      color: "from-green-500 to-emerald-500",
-    },
-    {
-      id: 3,
-      title: "Frontend Developer",
-      company: "Deosoft IT Services Pvt. Ltd.",
-      location: "Ranchi, Jharkhand",
-      period: "July 2023 - Jan 2025",
-      type: "Full-time",
-      description:
-        "Developed responsive websites and web applications for clients. Collaborated with designers to implement pixel-perfect UI components.",
-      achievements: [
-        "Completed 15+ client projects",
-        "Improved website loading speed by 60%",
-        "Implemented accessibility standards",
-      ],
-      technologies: [
-        "HTML",
-        "CSS",
-        "Bootstrap",
-        "Tailwind CSS",
-        "JavaScript",
-        "React",
-      ],
-      icon: Code2,
-      color: "from-purple-500 to-violet-500",
-    },
-  ];
+ const experiences = [
+  {
+    id: 1,
+    title: "Full Stack Developer",
+    company: "Freelancer",
+    period: "Aug 2025 - Present",
+    type: "Freelance",
+    description:
+      "Working with clients on diverse projects as a full-stack developer. Building scalable web applications, handling both frontend and backend, and delivering end-to-end solutions with modern technologies.",
+    achievements: [
+      "Delivered multiple client projects with 100% satisfaction",
+      "Implemented optimized architectures for better scalability",
+      "Managed projects independently, from planning to deployment",
+    ],
+    technologies: [
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "Laravel",
+      "Tailwind CSS",
+      "MySQL",
+      "PostgreSQL",
+      "Docker",
+      "AWS",
+    ],
+    icon: Briefcase,
+    color: "from-blue-500 to-cyan-500",
+  },
+  {
+    id: 2,
+    title: "Fullstack Developer",
+    company: "ePointer Consultancy Services Pvt. Ltd.",
+    period: "Feb 2025 - July 2025",
+    type: "Full-time",
+    description:
+      "Built and maintained full-stack applications using Laravel (PHP), JavaScript, MySQL, and Alpine.js. Designed and consumed RESTful APIs, developed interactive UI components, and optimized database performance.",
+    achievements: [
+      "Delivered responsive and dynamic full-stack applications",
+      "Designed and consumed RESTful APIs in Laravel",
+      "Optimized MySQL database with complex queries and indexing",
+    ],
+    technologies: [
+      "Laravel",
+      "PHP",
+      "JavaScript",
+      "Alpine.js",
+      "Tailwind CSS",
+      "MySQL",
+    ],
+    icon: Rocket,
+    color: "from-green-500 to-emerald-500",
+  },
+  {
+    id: 3,
+    title: "Frontend Developer",
+    company: "Deosoft IT Services Pvt. Ltd.",
+    period: "July 2023 - Jan 2025",
+    type: "Full-time",
+    description:
+      "Developed and maintained 10+ responsive web applications using React.js, JavaScript, Bootstrap, and Tailwind CSS. Integrated RESTful APIs, optimized performance, and improved SEO and accessibility.",
+    achievements: [
+      "Increased user engagement by 30% through improved UI/UX",
+      "Reduced API response time by 20% with efficient integration",
+      "Boosted mobile compatibility by 40% with responsive design",
+      "Improved SEO and performance with a 15% faster load time",
+    ],
+    technologies: [
+      "React.js",
+      "JavaScript",
+      "Bootstrap",
+      "Tailwind CSS",
+      "HTML",
+      "CSS",
+      "RESTful APIs",
+    ],
+    icon: Code2,
+    color: "from-purple-500 to-violet-500",
+  },
+];
+
 
   // Animation variants
   const containerVariants = {
@@ -116,7 +118,7 @@ const Experience: React.FC = () => {
           className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-accent-600 bg-clip-text text-transparent mb-6">
-            Experience & Education
+           Work Experience
           </h2>
           <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
             A journey of code, creativity, and continuous growth.
@@ -163,7 +165,8 @@ const Experience: React.FC = () => {
                     {exp.company}
                   </p>
                   <p className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">
-                    {exp.location} • {exp.period} • {exp.type}
+                    {/* {exp.location} •  */}
+                    {exp.period} • {exp.type}
                   </p>
 
                   <p className="text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">

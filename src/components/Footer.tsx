@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             className="font-bold text-4xl sm:text-5xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent tracking-wide drop-shadow-lg"
           >
-            My Portfolio
+            Md Portfolio
           </motion.h1>
 
           <p className="max-w-xl text-gray-400 text-lg leading-relaxed font-light">
@@ -70,13 +70,16 @@ const Footer: React.FC = () => {
 
           {/* Divider & copyright */}
           <div className="mt-5 border-t-3 border-gray-500 pt-6 text-lg">
-            <p className="text-gray-400 flex justify-center items-center gap-2">
-              © {new Date().getFullYear()} Mohammad Toushif. Made with
-              <Heart className="w-5 h-5 text-red-500 animate-pulse" />
-              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 bg-clip-text text-transparent font-semibold animate-gradient bg-[length:200%_200%]">
-                React
-              </span>
-            </p>
+            <div className="text-gray-400 flex flex-col md:flex-row justify-center items-center gap-2">
+              © {new Date().getFullYear()} Md Portfolio. All rights reserved. |
+              <p className="flex items-center gap-2">
+                Made with
+                <Heart className="w-5 h-5 text-red-500 animate-pulse" />
+                <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 bg-clip-text text-transparent font-semibold animate-gradient bg-[length:200%_200%]">
+                  & React
+                </span>
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>

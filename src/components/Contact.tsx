@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -11,6 +13,14 @@ import {
   Clock,
   CheckCircle,
 } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
+import { Label } from "./ui/label";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -25,9 +35,7 @@ const Contact: React.FC = () => {
   >("idle");
 
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({
       ...formData,
@@ -52,18 +60,17 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "alex@alexjohnson.dev",
-      href: "mailto:alex@alexjohnson.dev",
+      value: "mttoushif1020@gmail.com",
+      href: "mailto:mttoushif1020@gmail.com",
       color: "from-blue-500 to-cyan-500",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+91-8102059861",
+      href: "tel:+918102059861",
       color: "from-green-500 to-emerald-500",
     },
-
     {
       icon: Clock,
       label: "Response Time",
@@ -110,11 +117,9 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section
-      id="contact"
-      className="py-20"
-    >
+    <section id="contact" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -208,16 +213,16 @@ const Contact: React.FC = () => {
             className="relative"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-3xl blur-xl"></div>
-            <div className="relative bg-white/80 dark:bg-dark-800/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-200/50 dark:border-dark-600/50">
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="relative bg-white/80 dark:bg-dark-800/80 backdrop-blur-sm rounded-3xl px-4 py-6 sm:p-8 shadow-2xl border border-gray-200/50 dark:border-dark-600/50">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label
+                    <Label
                       htmlFor="name"
                       className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
                     >
                       Full Name *
-                    </label>
+                    </Label>
                     <input
                       type="text"
                       id="name"
@@ -231,12 +236,12 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div>
-                    <label
+                    <Label
                       htmlFor="email"
                       className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
                     >
                       Email Address *
-                    </label>
+                    </Label>
                     <input
                       type="email"
                       id="email"
@@ -251,35 +256,38 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div>
-                  <label
+                  <Label
                     htmlFor="subject"
                     className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
                   >
                     Project Type
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
+                  </Label>
+                  <Select
                     value={formData.subject}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/50 dark:bg-dark-700/50 border border-gray-300/50 dark:border-dark-600/50 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white"
+                    onValueChange={(value) =>
+                      setFormData({ ...formData, subject: value })
+                    }
                   >
-                    <option value="">Select a project type</option>
-                    {projectTypes.map((type) => (
-                      <option key={type} value={type}>
-                        {type}
-                      </option>
-                    ))}
-                  </select>
+                    <SelectTrigger className="w-full px-4 py-3 bg-white/50 dark:bg-dark-700/50 border border-gray-300/50 dark:border-dark-600/50 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white">
+                      <SelectValue placeholder="Choose a project type" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-gray-50 border border-gray-300/50 rounded-lg">
+                      {projectTypes.map((type) => (
+                        <SelectItem key={type} value={type} className="hover:bg-gray-100 cursor-pointer py-2">
+                          {type}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                 </div>
 
                 <div>
-                  <label
+                  <Label
                     htmlFor="message"
                     className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
                   >
                     Message *
-                  </label>
+                  </Label>
                   <textarea
                     id="message"
                     name="message"
@@ -292,6 +300,7 @@ const Contact: React.FC = () => {
                   />
                 </div>
 
+                {/* Submit Button */}
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}

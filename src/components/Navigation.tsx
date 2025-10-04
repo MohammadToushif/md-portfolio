@@ -49,7 +49,7 @@ const Navigation: React.FC = () => {
             onClick={() => scrollToSection("#home")}
             aria-label="DevPortfolio home"
           >
-            My Portfolio
+            Md Portfolio
           </motion.div>
 
           {/* Desktop Navigation */}
