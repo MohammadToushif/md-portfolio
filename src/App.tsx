@@ -16,7 +16,9 @@ function App() {
     <ThemeProvider>
       <div className="min-h-screen">
         <NebulaBackground />
-        <Cursor />
+        <span className="hidden md:inline-block">
+          <Cursor />
+        </span>
         <Navigation />
         <Hero />
         <About />

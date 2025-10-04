@@ -83,13 +83,13 @@ const Contact: React.FC = () => {
   const socialLinks = [
     {
       icon: Github,
-      href: "#",
+      href: "https://github.com/MohammadToushif",
       label: "GitHub",
       color: "hover:text-gray-800 dark:hover:text-white",
     },
     {
       icon: Linkedin,
-      href: "#",
+      href: "https://linkedin.com/in/mohammad-toushif-445648271",
       label: "LinkedIn",
       color: "hover:text-blue-600",
     },
@@ -101,7 +101,7 @@ const Contact: React.FC = () => {
     },
     {
       icon: MessageCircle,
-      href: "#",
+      href: "mailto:mttoushif1020@gmail.com",
       label: "Discord",
       color: "hover:text-indigo-600",
     },
@@ -190,6 +190,7 @@ const Contact: React.FC = () => {
                 <motion.a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.1 }}
@@ -273,7 +274,11 @@ const Contact: React.FC = () => {
                     </SelectTrigger>
                     <SelectContent className="bg-gray-50 border border-gray-300/50 rounded-lg">
                       {projectTypes.map((type) => (
-                        <SelectItem key={type} value={type} className="hover:bg-gray-100 cursor-pointer py-2">
+                        <SelectItem
+                          key={type}
+                          value={type}
+                          className="hover:bg-gray-100 cursor-pointer py-2"
+                        >
                           {type}
                         </SelectItem>
                       ))}

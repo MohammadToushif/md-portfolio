@@ -74,18 +74,19 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <motion.button
+            <motion.a
               whileHover={{
                 scale: 1.08,
                 boxShadow: "0 0 25px rgba(59,130,246,0.8)",
               }}
               whileTap={{ scale: 0.95 }}
+              href="mailto:mttoushif1020@gmail.com"
               className="flex items-center px-8 py-3 sm:px-10 sm:py-4 rounded-full font-semibold text-white bg-gradient-to-r from-blue-500 via-purple-600 to-cyan-500 shadow-xl relative overflow-hidden"
             >
               <Mail size={22} className="mr-2" /> Get In Touch
-            </motion.button>
+            </motion.a>
 
-            <motion.button
+            <motion.a
               whileHover={{
                 scale: 1.08,
                 boxShadow: "0 0 20px rgba(59,130,246,0.7)",
@@ -94,7 +95,7 @@ const Hero: React.FC = () => {
               className="px-8 py-3 sm:px-10 sm:py-4 rounded-full font-semibold border border-blue-400 text-blue-300 hover:text-white hover:bg-blue-500/30 backdrop-blur-md shadow-xl"
             >
               View My Work
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           {/* Social Links with parallax hover */}
@@ -104,24 +105,31 @@ const Hero: React.FC = () => {
             transition={{ delay: 1 }}
             className="flex justify-center space-x-8"
           >
-            {[{ icon: Github }, { icon: Linkedin }, { icon: Mail }].map(
-              ({ icon: Icon }, i) => (
-                <motion.a
-                  key={i}
-                  href="#"
-                  whileHover={{
-                    scale: 1.3,
-                    rotate: 5,
-                    y: -6,
-                    boxShadow: "0 8px 25px rgba(59,130,246,0.6)",
-                  }}
-                  whileTap={{ scale: 0.9 }}
-                  className="p-3 rounded-full bg-white/10 border border-white/20 text-gray-300 hover:text-blue-400 backdrop-blur-lg"
-                >
-                  <Icon size={26} />
-                </motion.a>
-              )
-            )}
+            {[
+              { icon: Github, link: "https://github.com/MohammadToushif" },
+              {
+                icon: Linkedin,
+                link: "https://linkedin.com/in/mohammad-toushif-445648271",
+              },
+              { icon: Mail, link: "mailto:mttoushif1020@gmail.com" },
+            ].map((item, i) => (
+              <motion.a
+                key={i}
+                href={item.link || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{
+                  scale: 1.3,
+                  rotate: 5,
+                  y: -6,
+                  boxShadow: "0 8px 25px rgba(59,130,246,0.6)",
+                }}
+                whileTap={{ scale: 0.9 }}
+                className="p-3 rounded-full bg-white/10 border border-white/20 text-gray-300 hover:text-blue-400 backdrop-blur-lg"
+              >
+                <item.icon size={26} />
+              </motion.a>
+            ))}
           </motion.div>
         </motion.div>
       </div>

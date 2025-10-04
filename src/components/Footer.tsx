@@ -6,13 +6,13 @@ const Footer: React.FC = () => {
   const socialLinks = [
     {
       icon: <Github className="w-6 h-6" />,
-      href: "#",
+      href: "https://github.com/MohammadToushif",
       color:
         "hover:text-gray-200 hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]",
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
-      href: "#",
+      href: "https://linkedin.com/in/mohammad-toushif-445648271",
       color: "hover:text-blue-400 hover:drop-shadow-[0_0_10px_rgb(96,165,250)]",
     },
     {
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
     },
     {
       icon: <Mail className="w-6 h-6" />,
-      href: "#",
+      href: "mailto:mttoushif1020@gmail.com",
       color:
         "hover:text-pink-400 hover:drop-shadow-[0_0_10px_rgb(244,114,182)]",
     },
