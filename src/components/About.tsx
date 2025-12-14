@@ -194,7 +194,7 @@ const About: React.FC = () => {
           </h2>
           <p className="text-lg md:text-xl mt-4 text-gray-400 max-w-2xl mx-auto">
             Passionate developer with{" "}
-            <span className="font-semibold">2+ years</span> of experience
+            <span className="font-semibold">2.5+ years</span> of experience
             building scalable and delightful digital products.
           </p>
         </motion.div>
